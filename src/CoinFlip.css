@@ -1,0 +1,10 @@
+.CoinFlip-Coin {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+}
+
+.CoinFlip button {
+    margin-top: 0.5em;
+}
