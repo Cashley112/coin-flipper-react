@@ -9,7 +9,12 @@ class CoinFlip extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { side: this.props.headsImg };
+        this.state = { 
+            curSide: null,
+            nFlips: 0,
+            nHeads: 0,
+            nTails: 0 
+        };
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -29,11 +34,8 @@ class CoinFlip extends Component {
     render () {
         return (
             <div className="CoinFlip">
-                <h1>Flip A Coin!</h1>
-                <div className="CoinFlip-Coin">
-                <img alt="coin" src={this.state.side} />
-                </div>
-                <button onClick={this.handleClick}>Try Your Luck</button>
+                <h2>Flip A Coin!</h2>
+                <p>Out of {this.state.nFlips} flips, there have been {this.state.nHeads}</p>
             </div>
         )
     }
